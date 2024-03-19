@@ -1,0 +1,418 @@
+{
+    "mode-0001": {
+        "0": {
+            "str": "m1 string test - 0, intentionally make a long string for testing",
+            "list": ["KEY_DELETE", null, null],
+            "mode": true
+        },
+        "1": {
+            "str": "m1 string test - 1",
+            "list": ["KEY_LEFT_GUI", "r", null],
+            "mode": false
+        },
+        "2": {
+            "str": "m1 string test - 2",
+            "list": ["KEY_DELETE", null, null],
+            "mode": false
+        },
+        "3": {
+            "str": "m1 string test - 3",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "4": {
+            "str": "m1 string test - 4",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "5": {
+            "str": "m1 string test - 5",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "6": {
+            "str": "m1 string test - 6",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "7": {
+            "str": "m1 string test - 7",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "8": {
+            "str": "m1 string test - 8",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "9": {
+            "str": "m1 string test - 9",
+            "list": [null, null, null],
+            "mode": true
+        }
+    },
+    "mode-0010": {
+        "0": {
+            "str": "m2 string test - 0",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "1": {
+            "str": "m2 string test - 1",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "2": {
+            "str": "m2 string test - 2",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "3": {
+            "str": "m2 string test - 3",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "4": {
+            "str": "m2 string test - 4",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "5": {
+            "str": "m2 string test - 5",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "6": {
+            "str": "m2 string test - 6",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "7": {
+            "str": "m2 string test - 7",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "8": {
+            "str": "m2 string test - 8",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "9": {
+            "str": "m2 string test - 9",
+            "list": [null, null, null],
+            "mode": true
+        }
+    },
+    "mode-0011": {
+        "0": {
+            "str": "m3 string test - 0",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "1": {
+            "str": "m3 string test - 1",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "2": {
+            "str": "m3 string test - 2",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "3": {
+            "str": "m3 string test - 3",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "4": {
+            "str": "m3 string test - 4",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "5": {
+            "str": "m3 string test - 5",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "6": {
+            "str": "m3 string test - 6",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "7": {
+            "str": "m3 string test - 7",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "8": {
+            "str": "m3 string test - 8",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "9": {
+            "str": "m3 string test - 9",
+            "list": [null, null, null],
+            "mode": true
+        }
+    },
+    "mode-0100": {
+        "0": {
+            "str": "m4 string test - 0",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "1": {
+            "str": "m4 string test - 1",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "2": {
+            "str": "m4 string test - 2",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "3": {
+            "str": "m4 string test - 3",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "4": {
+            "str": "m4 string test - 4",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "5": {
+            "str": "m4 string test - 5",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "6": {
+            "str": "m4 string test - 6",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "7": {
+            "str": "m4 string test - 7",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "8": {
+            "str": "m4 string test - 8",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "9": {
+            "str": "m4 string test - 9",
+            "list": [null, null, null],
+            "mode": true
+        }
+    },
+    "mode-0101": {
+        "0": {
+            "str": "m5 string test - 0",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "1": {
+            "str": "m5 string test - 1",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "2": {
+            "str": "m5 string test - 2",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "3": {
+            "str": "m5 string test - 3",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "4": {
+            "str": "m5 string test - 4",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "5": {
+            "str": "m5 string test - 5",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "6": {
+            "str": "m5 string test - 6",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "7": {
+            "str": "m5 string test - 7",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "8": {
+            "str": "m5 string test - 8",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "9": {
+            "str": "m5 string test - 9",
+            "list": [null, null, null],
+            "mode": true
+        }
+    },
+    "mode-0110": {
+        "0": {
+            "str": "m6 string test - 0",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "1": {
+            "str": "m6 string test - 1",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "2": {
+            "str": "m6 string test - 2",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "3": {
+            "str": "m6 string test - 3",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "4": {
+            "str": "m6 string test - 4",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "5": {
+            "str": "m6 string test - 5",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "6": {
+            "str": "m6 string test - 6",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "7": {
+            "str": "m6 string test - 7",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "8": {
+            "str": "m6 string test - 8",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "9": {
+            "str": "m6 string test - 9",
+            "list": [null, null, null],
+            "mode": true
+        }
+    },
+    "mode-0111": {
+        "0": {
+            "str": "m7 string test - 0",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "1": {
+            "str": "m7 string test - 1",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "2": {
+            "str": "m7 string test - 2",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "3": {
+            "str": "m7 string test - 3",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "4": {
+            "str": "m7 string test - 4",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "5": {
+            "str": "m7 string test - 5",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "6": {
+            "str": "m7 string test - 6",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "7": {
+            "str": "m7 string test - 7",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "8": {
+            "str": "m7 string test - 8",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "9": {
+            "str": "m7 string test - 9",
+            "list": [null, null, null],
+            "mode": true
+        }
+    },
+    "mode-1000": {
+        "0": {
+            "str": "m8 string test - 0",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "1": {
+            "str": "m8 string test - 1",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "2": {
+            "str": "m8 string test - 2",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "3": {
+            "str": "m8 string test - 3",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "4": {
+            "str": "m8 string test - 4",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "5": {
+            "str": "m8 string test - 5",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "6": {
+            "str": "m8 string test - 6",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "7": {
+            "str": "m8 string test - 7",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "8": {
+            "str": "m8 string test - 8",
+            "list": [null, null, null],
+            "mode": true
+        },
+        "9": {
+            "str": "m8 string test - 9",
+            "list": [null, null, null],
+            "mode": true
+        }
+    }
+}
