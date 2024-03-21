@@ -670,6 +670,13 @@ pip install inputimeout
 
 The Python code will automatically detect the Arduino is looking for the JSON and dump the data through the Serial port.
 
+# Upcoming updates
+
+Some minor improvements to this project may or may not be updated.
+
+- [ ] Add manual LED effect sequence that allows different LED patterns for different state
+- [ ] Update 3D model
+
 # Used libraries
 
 This project consisted of several open-source projects. This section aims to acknowledge them to make this project possible.
