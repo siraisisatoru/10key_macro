@@ -15,6 +15,7 @@ void setup() {
     memMaster.init(state);
     panelMaster.init(memMaster.getKeyConfig());
     panelMaster.beginKeyboard();
+    panelMaster.beginMouse();
     panelMaster.attachInterruptToEncoder(rencoderP1);
     panelMaster.attachInterruptToEncoder(rencoderP2);
 

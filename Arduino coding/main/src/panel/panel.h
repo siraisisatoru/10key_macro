@@ -3,8 +3,10 @@
 #include "../LEDManager/LEDManager.h"
 #include "../RotaryEncoder/RotaryEncoder.h"
 #include "../key/key.h"
+#include "../encoder/encoder.h"
 #include "Arduino.h"
 #include "Keyboard.h"
+#include "Mouse.h"
 #include "preset.h"
 
 class panel {
@@ -15,7 +17,8 @@ class panel {
     unsigned int newData = 0;
     int pos = 0;
     int newPos = 0;
-    RotaryEncoder *encoder = nullptr;
+    RotaryEncoder *encoderPT = nullptr;
+    encoder mouseEncoder;
     key keys[LEDCount];
     LEDManager LEDMaster;
     const byte lookup[8] = {6, 7, 8, 9, 5, 4, 3, 2};
@@ -46,6 +49,14 @@ class panel {
         Keyboard.end();
     }
 
+    void beginMouse() {
+        Mouse.begin();
+    }
+
+    void endMouse() {
+        Mouse.end();
+    }
+
     void init(String keyConfig[10]);
     void updateKeys(String keyConfig[10]);
 
@@ -72,7 +83,7 @@ class panel {
         LEDMaster.LEDloop();
     }
 
-    void errorLoop(){
+    void errorLoop() {
         LEDMaster.errorLoop();
     }
 

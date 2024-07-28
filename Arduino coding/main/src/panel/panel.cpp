@@ -22,7 +22,7 @@ panel::panel(/* args */) {
     pinMode(TswithC, INPUT_PULLUP);
     pinMode(TswithD, INPUT_PULLUP);
 
-    encoder = new RotaryEncoder(rencoderP1, rencoderP2, RotaryEncoder::LatchMode::TWO03);
+    encoderPT = new RotaryEncoder(rencoderP1, rencoderP2, RotaryEncoder::LatchMode::TWO03);
 }
 
 panel::~panel() {
@@ -103,8 +103,11 @@ void panel::monitorKeys() {
         Serial.print("pos:");
         Serial.print(newPos);
         Serial.print(" dir:");
-        Serial.println((int)(encoder->getDirection()));
-        pos = newPos;
+        // Serial.println((int)(encoderPT->getDirection()));
+        mouseEncoder.scroll((int)(encoderPT->getDirection()) *-1);
+                pos = newPos;
+
+
     }
     if (sw != nsw) {
         Serial.println(nsw, BIN);
@@ -113,10 +116,10 @@ void panel::monitorKeys() {
 }
 
 void panel::checkPosition() {
-    encoder->tick(); // just call tick() to check the state.
+    encoderPT->tick(); // just call tick() to check the state.
 }
 
 void panel::update_encoder() {
-    encoder->tick(); // just call tick() to check the state.
-    newPos = encoder->getPosition();
+    encoderPT->tick(); // just call tick() to check the state.
+    newPos = encoderPT->getPosition();
 }
