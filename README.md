@@ -110,13 +110,13 @@ The state is determined by the toggle switch which is capable of 16 values (0 ->
 
 To configure each key output in each mode, a predefined JSON file is created and can be loaded to EEPROM. Arduino will load the specific chunk from EEPROM to update each key config.
 
-|             Key in object              |                                      Description                                       |            Example            |
-| :------------------------------------: | :------------------------------------------------------------------------------------: | :---------------------------: |
-|                  Mode                  |        `"mode-xxxx"` <br> where xxxx is the binary representation of the state         |         `"mode-0001"`         |
-|               Key index                |              From `"0"` to `"9"` represents the key index of the keyboard              |             `"0"`             |
-|         default string `"str"`         | `"mx string test - y"` where x is the mode from `1` to `8` and <br> y is the key index |    `"m1 string test - 1"`     |
-| default key <br> binding list `"list"` |               The list of keybinding that will be `pressed` all in once                | `["KEY_LEFT_GUI", "r", null]` |
-|       default key mode `"mode"`        |       `true` means print string and `false` means press key binding in the list        |            `true`             |
+|             Key in object              |                                         Description                                          |            Example            |
+| :------------------------------------: | :------------------------------------------------------------------------------------------: | :---------------------------: |
+|                  Mode                  |           `"mode-xxxx"` <br> where xxxx is the binary representation of the state            |         `"mode-0001"`         |
+|               Key index                |                 From `"0"` to `"9"` represents the key index of the keyboard                 |             `"0"`             |
+|         default string `"str"`         |    `"mx string test - y"` where x is the mode from `1` to `8` and <br> y is the key index    |    `"m1 string test - 1"`     |
+| default key <br> binding list `"list"` |                  The list of keybinding that will be `pressed` all in once                   | `["KEY_LEFT_GUI", "r", null]` |
+|       default key mode `"mode"`        | `1` means print string, `0` means press key binding in the list and `2` means press and hold |              `1`              |
 
 <details>
 <summary> Default configuration JSON file</summary>
@@ -127,416 +127,416 @@ To configure each key output in each mode, a predefined JSON file is created and
         "0": {
             "str": "m1 string test - 0, intentionally make a long string for testing",
             "list": ["KEY_DELETE", null, null],
-            "mode": true
+            "mode": 1
         },
         "1": {
             "str": "m1 string test - 1",
             "list": ["KEY_LEFT_GUI", "r", null],
-            "mode": false
+            "mode": 0
         },
         "2": {
             "str": "m1 string test - 2",
             "list": ["KEY_DELETE", null, null],
-            "mode": false
+            "mode": 0
         },
         "3": {
             "str": "m1 string test - 3",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "4": {
             "str": "m1 string test - 4",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "5": {
             "str": "m1 string test - 5",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "6": {
             "str": "m1 string test - 6",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "7": {
             "str": "m1 string test - 7",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "8": {
             "str": "m1 string test - 8",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "9": {
             "str": "m1 string test - 9",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         }
     },
     "mode-0010": {
         "0": {
-            "str": "m2 string test - 0",
+            "str": "",
             "list": [null, null, null],
-            "mode": true
+            "mode": 2
         },
         "1": {
             "str": "m2 string test - 1",
             "list": [null, null, null],
-            "mode": true
+            "mode": 0
         },
         "2": {
             "str": "m2 string test - 2",
-            "list": [null, null, null],
-            "mode": true
+            "list": ["KEY_LEFT_GUI", "s", null],
+            "mode": 2
         },
         "3": {
             "str": "m2 string test - 3",
-            "list": [null, null, null],
-            "mode": true
+            "list": ["KEY_LEFT_GUI", "x", null],
+            "mode": 0
         },
         "4": {
             "str": "m2 string test - 4",
-            "list": [null, null, null],
-            "mode": true
+            "list": ["KEY_LEFT_SHIFT", null, null],
+            "mode": 2
         },
         "5": {
             "str": "m2 string test - 5",
-            "list": [null, null, null],
-            "mode": true
+            "list": ["KEY_UP_ARROW", null, null],
+            "mode": 0
         },
         "6": {
             "str": "m2 string test - 6",
-            "list": [null, null, null],
-            "mode": true
+            "list": ["KEY_LEFT_GUI", "f", null],
+            "mode": 0
         },
         "7": {
             "str": "m2 string test - 7",
-            "list": [null, null, null],
-            "mode": true
+            "list": ["KEY_LEFT_GUI", "v", null],
+            "mode": 0
         },
         "8": {
             "str": "m2 string test - 8",
-            "list": [null, null, null],
-            "mode": true
+            "list": ["KEY_LEFT_GUI", "c", null],
+            "mode": 0
         },
         "9": {
             "str": "m2 string test - 9",
-            "list": [null, null, null],
-            "mode": true
+            "list": ["KEY_DOWN_ARROW", null, null],
+            "mode": 0
         }
     },
     "mode-0011": {
         "0": {
             "str": "m3 string test - 0",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "1": {
             "str": "m3 string test - 1",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "2": {
             "str": "m3 string test - 2",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "3": {
             "str": "m3 string test - 3",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "4": {
             "str": "m3 string test - 4",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "5": {
             "str": "m3 string test - 5",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "6": {
             "str": "m3 string test - 6",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "7": {
             "str": "m3 string test - 7",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "8": {
             "str": "m3 string test - 8",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "9": {
             "str": "m3 string test - 9",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         }
     },
     "mode-0100": {
         "0": {
             "str": "m4 string test - 0",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "1": {
             "str": "m4 string test - 1",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "2": {
             "str": "m4 string test - 2",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "3": {
             "str": "m4 string test - 3",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "4": {
             "str": "m4 string test - 4",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "5": {
             "str": "m4 string test - 5",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "6": {
             "str": "m4 string test - 6",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "7": {
             "str": "m4 string test - 7",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "8": {
             "str": "m4 string test - 8",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "9": {
             "str": "m4 string test - 9",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         }
     },
     "mode-0101": {
         "0": {
             "str": "m5 string test - 0",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "1": {
             "str": "m5 string test - 1",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "2": {
             "str": "m5 string test - 2",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "3": {
             "str": "m5 string test - 3",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "4": {
             "str": "m5 string test - 4",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "5": {
             "str": "m5 string test - 5",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "6": {
             "str": "m5 string test - 6",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "7": {
             "str": "m5 string test - 7",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "8": {
             "str": "m5 string test - 8",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "9": {
             "str": "m5 string test - 9",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         }
     },
     "mode-0110": {
         "0": {
             "str": "m6 string test - 0",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "1": {
             "str": "m6 string test - 1",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "2": {
             "str": "m6 string test - 2",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "3": {
             "str": "m6 string test - 3",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "4": {
             "str": "m6 string test - 4",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "5": {
             "str": "m6 string test - 5",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "6": {
             "str": "m6 string test - 6",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "7": {
             "str": "m6 string test - 7",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "8": {
             "str": "m6 string test - 8",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "9": {
             "str": "m6 string test - 9",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         }
     },
     "mode-0111": {
         "0": {
             "str": "m7 string test - 0",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "1": {
             "str": "m7 string test - 1",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "2": {
             "str": "m7 string test - 2",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "3": {
             "str": "m7 string test - 3",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "4": {
             "str": "m7 string test - 4",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "5": {
             "str": "m7 string test - 5",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "6": {
             "str": "m7 string test - 6",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "7": {
             "str": "m7 string test - 7",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "8": {
             "str": "m7 string test - 8",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "9": {
             "str": "m7 string test - 9",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         }
     },
     "mode-1000": {
         "0": {
             "str": "m8 string test - 0",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "1": {
             "str": "m8 string test - 1",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "2": {
             "str": "m8 string test - 2",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "3": {
             "str": "m8 string test - 3",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "4": {
             "str": "m8 string test - 4",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "5": {
             "str": "m8 string test - 5",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "6": {
             "str": "m8 string test - 6",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "7": {
             "str": "m8 string test - 7",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "8": {
             "str": "m8 string test - 8",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         },
         "9": {
             "str": "m8 string test - 9",
             "list": [null, null, null],
-            "mode": true
+            "mode": 1
         }
     }
 }
@@ -674,8 +674,8 @@ The Python code will automatically detect the Arduino is looking for the JSON an
 
 Some minor improvements to this project may or may not be updated.
 
-- [ ] Add manual LED effect sequence that allows different LED patterns for different state
-- [ ] Update 3D model
+-   [ ] Add manual LED effect sequence that allows different LED patterns for different state
+-   [ ] Update 3D model
 
 # Used libraries
 

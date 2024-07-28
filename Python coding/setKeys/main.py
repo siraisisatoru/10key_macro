@@ -1,3 +1,4 @@
+# python3.11 main.py
 # from inputimeout import inputimeout, TimeoutOccurred
 import serial.tools.list_ports
 import json
@@ -5,6 +6,7 @@ import time
 from datetime import datetime
 
 _print = print
+
 
 def print(*args, **kw):
     _print("[%s]" % (datetime.now()), *args, **kw)
@@ -40,7 +42,8 @@ def send_json_to_arduino(comPort):
         keyMap = keyMapJson["mode-" + modeIdx]
 
         for keyIdx in range(10):
-            keyMode = "1" if keyMap[str(keyIdx)]["mode"] else "0"
+            # keyMode = "1" if keyMap[str(keyIdx)]["mode"] else "0"
+            keyMode = str(keyMap[str(keyIdx)]["mode"])
             ser.write(keyMode.encode())
 
             stringArr = ""

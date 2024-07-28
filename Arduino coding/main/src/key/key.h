@@ -10,7 +10,7 @@ class key {
     String printStr = "";      // default string ""
     char funcKey[3];
 
-    bool exeMode = false;
+    unsigned char exeMode = 0;
 
   public:
     key(/* args */);
@@ -28,12 +28,13 @@ class key {
         }
     };
 
-    void setMode(bool mode) { exeMode = mode; }
+    void setMode(unsigned char mode) { exeMode = mode; }
 
-    void exeKey();
+    void exeKey(bool trigger);
 
     void exeKeyPrintln();
-    void exeKeyPress();
+    void exeKeyPress(bool once);
+    void exeKeyRelease();
 };
 
 #endif

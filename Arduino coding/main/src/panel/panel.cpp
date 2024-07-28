@@ -38,13 +38,14 @@ void panel::init(String keyConfig[10]) {
 
 void panel::updateKeys(String keyConfig[10]) {
     char configList[3];
+    Keyboard.releaseAll();
     for (unsigned char i = 0; i < LEDCount; i++) {
         configList[0] = keyConfig[i].charAt(1);
         configList[1] = keyConfig[i].charAt(2);
         configList[2] = keyConfig[i].charAt(3);
         keys[i].setFuncKey(configList);
         keys[i].setPrintStr(keyConfig[i].substring(4));
-        keys[i].setMode(keyConfig[i].charAt(0) == '1');
+        keys[i].setMode(keyConfig[i].charAt(0) - '0');
         // keys[i].exeKeyPrintln();
         // keys[i].exeKeyPress();
     }
@@ -77,7 +78,6 @@ void panel::read_keys() {
         digitalWrite(keyCLK, HIGH);
     }
 }
-    
 
 void panel::monitorKeys() {
 
@@ -93,7 +93,9 @@ void panel::monitorKeys() {
         Serial.println(newData, BIN);
         for (int i = 0; i < LEDCount; i++) {
             if ((newData & (1 << i)) && !(preData & (1 << i))) {
-                keys[i].exeKey();
+                keys[i].exeKey(true);
+            } else if (!(newData & (1 << i)) && (preData & (1 << i))) {
+                keys[i].exeKeyRelease();
             }
         }
     }
